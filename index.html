@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LED Talk Support</title>
+  <meta name="description" content="LED Talk support page with app information, contact details, and privacy notice." />
+  <style>
+    :root {
+      --bg: #07070d;
+      --panel: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.14);
+      --text: #f5f5f7;
+      --muted: #b9b9c9;
+      --yellow: #ffd83d;
+      --yellow-strong: #ffcc00;
+      --cyan: #4deeff;
+      --pink: #ff4fd8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255, 79, 216, 0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(77, 238, 255, 0.12), transparent 30%),
+        radial-gradient(circle at bottom center, rgba(255, 216, 61, 0.08), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 20px 36px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow:
+        0 0 24px rgba(255, 204, 0, 0.08),
+        0 0 50px rgba(77, 238, 255, 0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 216, 61, 0.35);
+      color: var(--yellow);
+      background: rgba(255, 216, 61, 0.08);
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+      box-shadow: 0 0 12px rgba(255, 216, 61, 0.18);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--yellow);
+      text-shadow:
+        0 0 8px rgba(255, 216, 61, 0.85),
+        0 0 22px rgba(255, 216, 61, 0.35);
+    }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px 20px;
+      box-shadow: 0 0 18px rgba(255,255,255,0.02);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(77, 238, 255, 0.25);
+    }
+
+    .card p, .card li {
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    .full {
+      margin-top: 18px;
+    }
+
+    .email-box {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255, 216, 61, 0.08);
+      border: 1px solid rgba(255, 216, 61, 0.24);
+      box-shadow: 0 0 12px rgba(255, 216, 61, 0.1);
+      word-break: break-all;
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .highlight {
+      color: var(--yellow);
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 20px 16px 48px;
+      }
+
+      .hero {
+        padding: 36px 16px 28px;
+      }
+
+      .card {
+        padding: 18px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="badge">Official Support Page</div>
+      <h1>LED Talk Support</h1>
+      <p class="tagline">
+        Say it bright. Simple support, app information, and privacy details for LED Talk.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>About LED Talk</h2>
+        <p>
+          LED Talk is a simple LED message board app that lets you type messages
+          and display them in a bright, bold, eye-catching style.
+        </p>
+        <ul>
+          <li>Custom text and background colors</li>
+          <li>Glow and motion effects</li>
+          <li>Adjustable text size</li>
+          <li>Quick messages and recent messages</li>
+          <li>Emoji support</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Need Help?</h2>
+        <p>
+          If you have questions, suggestions, or experience a problem while using LED Talk,
+          please contact us by email.
+        </p>
+        <div class="email-box">
+          <a href="mailto:yjson616@gmail.com">yjson616@gmail.com</a>
+        </div>
+        <p class="small">
+          We will do our best to respond as soon as possible.
+        </p>
+      </article>
+    </section>
+
+    <section class="card full">
+      <h2>Privacy Notice</h2>
+      <p>
+        LED Talk is designed with simplicity and privacy in mind.
+      </p>
+      <ul>
+        <li>
+          <span class="highlight">No account required:</span>
+          You do not need to sign up or log in to use the app.
+        </li>
+        <li>
+          <span class="highlight">No personal data collection:</span>
+          LED Talk does not intentionally collect personally identifiable information.
+        </li>
+        <li>
+          <span class="highlight">Local usage only:</span>
+          Messages and recent content used in the app are intended for use on your device.
+        </li>
+        <li>
+          <span class="highlight">No selling of personal information:</span>
+          We do not sell or share your personal information for marketing purposes.
+        </li>
+      </ul>
+      <p class="small">
+        If future versions of the app include additional features that affect data handling,
+        this page may be updated accordingly.
+      </p>
+    </section>
+
+    <section class="card full">
+      <h2>App Information</h2>
+      <p><strong>App Name:</strong> LED Talk</p>
+      <p><strong>Developer:</strong> Jieun Son</p>
+      <p><strong>Support Email:</strong> <a href="mailto:yjson616@gmail.com">yjson616@gmail.com</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Jieun Son. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
